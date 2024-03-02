@@ -28,7 +28,6 @@ a{
 }
 p{
     font-family: Georgia,Times,"Times New Roman",serif;
-    font-size: medium;
     line-height: 1.6;
     width: 90%;
     text-transform: lowercase;
@@ -38,16 +37,22 @@ p{
 
 /* media quieries */
 @media (max-width: 767px){
-    .container{
+    aside{
+        display: none;
+    }
+    .container,.container1{
         width: 95%;
         /* margin: 0 auto; */
         padding: 0 10px;
         margin: auto;
         position: relative;
     }
+    p ,p>a{
+    font-size: 15px;
+    }
     header .top img{
     width: 50%;
-
+    padding-left: 10px;
     }
     header .top .right_side a{
         display: none;
@@ -83,6 +88,12 @@ p{
         font-weight: bold;
     }
     /* trending end */
+    section .quick_links a{
+    font-size: 15px;
+    }
+    section .related .div1{
+    font-size: 15px;
+    }
     /* links list start */
 section .links_list{
     display: grid;
@@ -116,111 +127,82 @@ section .links_list a i{
     padding:0 7px;
 }
 /* links list end */
+section .about a {
+    font-size: 10px;
 }
-@media (min-width : 767px) and (max-width : 901px){
-    .container{
-        width: 95%;
-        margin: auto;
-    }
-    .top .right_side{
+section .about span{
+    font-size: 10px;
+}
+section .about .enzo{
+    font-size: 10px;
+}
+footer .footer_links ul li , footer .footer_links ul li a{
+    font-size: 70%;
+}
+}
+@media (min-width : 767px) and (max-width : 900px){
+    aside{
         display: none;
     }
-    .top .login{
-        margin-right: 30px;
+    .container,.container1{
+        width: 90%;
+        padding: 0 10px;
+        margin: auto;
+        position: relative;
     }
-    header .trending{
-    display: none;
+    
+        p , p>a{
+    font-size: 20px;
     }
     header .top img{
-    width: 100%;
-}
-/* links list start */
-section .links_list{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1.5%;
-}
-section .links_list a img{
-    width:30px;
-}
-section .links_list a {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 7px 10px ;
-    text-decoration: none;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-}
-section .links_list span{
-    font-weight: 900;
-    font-family: rajdhani;
-    font-size: 10px;
-    padding-top: 5px;
-}
-section .links_list a i{
-    padding:0 7px;
-}
-/* links list end */
-}
-@media (min-width : 991px) and (max-width : 1200px){
-    section{
-        width: 70%;
-        }
-        header .top img{
-    width: 100%;
-}
-/* links list start */
-section .links_list{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1.5%;
-}
-section .links_list a img{
-    width:30px;
-}
-section .links_list a {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 7px 10px ;
-    text-decoration: none;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-}
-section .links_list span{
-    font-weight: 900;
-    font-family: rajdhani;
-    font-size: 10px;
-    padding-top: 5px;
-}
-section .links_list a i{
-    padding:0 7px;
-}
-/* links list end */
-}
-@media(min-width :1200px){
-    .container{
-        width: 90%;
-        margin: auto;
+    width: 50%;
+    padding-left: 10px;
     }
-    section{
-        width: 50%;
-        }
-        header .top img{
-    width: 100%;
-}
-/* links list start */
+    header .top .right_side a{
+        display: none;
+    }
+    /* trending start */
+    header .trending ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2%;
+        list-style-type: none;
+        padding: 0;
+        height: 50px;
+        margin-top: 0;
+    }
+    header .trending ul li{
+        height: 1px;
+        display: inline-block;
+    }
+    header .trending li::marker{
+        color:#1d1d1d;
+    }
+    header .trending ul li a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+    header .trending li a{
+        color: #e2e2e2;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 0;
+    }
+    header .trending > ul > li:first-child > a{
+        font-weight: bold;
+    }
+    /* trending end */
+    section .related .div1{
+    font-size: 20px;
+    }
+    /* links list start */
 section .links_list{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5%;
+    row-gap: 10%;
+
 }
 section .links_list a img{
     width:30px;
@@ -247,6 +229,136 @@ section .links_list a i{
     padding:0 7px;
 }
 /* links list end */
+
+section .about a {
+    font-size: 15px;
+}
+section .about .enzo{
+    font-size: 15px;
+}
+footer .footer_links ul li , footer .footer_links ul li a{
+    font-size: 15px;
+}
+}
+@media (min-width : 900px){
+    aside{
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10% 250px 0;
+        position: sticky;
+        top: 15%;
+        float: right;
+        padding: 0 0 0 5%;
+    }
+    aside i{
+        font-size: 200px;
+    }
+    .container:first-child{
+        width: 90%;
+        padding: 0 10px;
+        margin: auto;
+        position: relative;
+    }
+    .container1{
+        width: 50%; 
+        padding: 10px 10px; 
+        margin: auto 0 0 10%;
+
+    }
+        .container:last-child{
+            width: 100%;
+            padding: 0 5%;
+            background-color: #181818;
+        }
+        p , p>a{
+    font-size: 20px;
+    }
+    header .top img{
+    width: 50%;
+    padding-left: 10px;
+    }
+    header .top .right_side a{
+        display: none;
+    }
+    /* trending start */
+    header .trending ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2%;
+        list-style-type: none;
+        padding: 0;
+        height: 50px;
+        margin-top: 0;
+    }
+    header .trending ul li{
+        height: 1px;
+        display: inline-block;
+    }
+    header .trending li::marker{
+        color:#1d1d1d;
+    }
+    header .trending ul li a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+    header .trending li a{
+        color: #e2e2e2;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 0;
+    }
+    header .trending > ul > li:first-child > a{
+        font-weight: bold;
+    }
+    /* trending end */
+    section .related .div1{
+    font-size: 20px;
+    }
+    /* links list start */
+section .links_list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5%;
+    row-gap: 10%;
+
+}
+section .links_list a img{
+    width:30px;
+}
+section .links_list a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 7px 10px ;
+    text-decoration: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+section .links_list span{
+    font-weight: 900;
+    font-family: rajdhani;
+    font-size: 10px;
+    padding-top: 5px;
+}
+section .links_list a i{
+    padding:0 7px;
+}
+/* links list end */
+
+section .about a {
+    font-size: 15px;
+}
+section .about .enzo{
+    font-size: 15px;
+}
+footer .footer_links ul li , footer .footer_links ul li a{
+    font-size: 15px;
+}
 }
 /* media quieries */
 /* top section start */
@@ -256,7 +368,7 @@ header .top{
     justify-content: center;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: relative;
 }
 header > .top::after{
@@ -321,65 +433,6 @@ header img:last-child{
     width: 100%;
 }
 /* h1 end */
-/*fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing
-
-
-
-
-header .top nav .menu{
-    width: 100%;
-    background-color: #444;
-}
-/* header .top nav .menu ul{
-    display: none;
-} ****************************************************
-header .top nav .menu ul div{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-}    
-header .top nav .menu ul div:first-child{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-header .top nav .menu ul div:first-child > * > i{
-    font-size: 30px;
-}
-header .top nav .menu .all_links > div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-header .top nav .menu .all_links > div a{
-    text-decoration: none;
-    font-weight: bold;
-}
-header .top nav .menu .all_links > div a + span > i{
-    color: var(--shade_of_orange);
-}
-header .top nav .menu ul  li a{
-    text-decoration: none;
-}
-header .top nav:hover .menu > ul{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5 , auto);
-    list-style: none;
-    padding: 30px;
-    margin: 0;
-    left: 0;
-    width: 100%;
-    height: 1vh;
-    top: 0;
-    z-index: 2;
-    gap: 50px;
-    position: absolute;
-}
-
-fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing fixing */
-/* top section end */
-
 /*section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section */
 /* quick links start */
 section{
@@ -405,7 +458,6 @@ section .quick_links a{
     background-color: #1d1d1d;
     text-decoration: none;
     font-weight: bold;
-    font-size: small;
 }
 section .quick_links a:hover{
     background-color: #d3d3d3;
@@ -415,10 +467,6 @@ section .quick_links a:hover{
 /* after quick start */
 section .after_quick a{
     font-family: 'Times New Roman', Times, serif;
-    font-size: small;
-}
-section .after_quick{
-    font-size: small;
 }
 /* after quick end */
 
@@ -444,15 +492,14 @@ section .related .div1 span:nth-child(2){
     border-bottom: 1px solid #444;
 }
 section .related .image{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 110px auto;
     gap: 10px;
-    padding-bottom: 30px;
-        border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
 }
 section .related .image img{
-    width: 180px;
+    width: 110px;
 }
 section .related .image .anc{
     display: flex;
@@ -558,11 +605,11 @@ section .next .hr span:nth-child(2){
     border-bottom: 1px solid #444;
 }
 section .next .image img{
-    width: 180px;
+    width: 110px;
 }
 section .next .image{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 110px auto;
     padding-bottom: 10px;
     border-bottom: 1px solid #444;
 }
@@ -659,17 +706,13 @@ section .related_topics a{
 /* author start */
 section .about a{
     text-decoration: none;
-    font-size: 10px;
     font-weight: bold;
 }
-section .about span{
-    font-size: 10px;
-}
+
 section .about span i{
     padding-left: 5px;
 }
 section .about .enzo{
-    font-size: 10px;
     margin: 0;
     font-family: Roboto,sans-serif;
     font-weight: 400;
@@ -678,9 +721,6 @@ section .about .enzo{
 /* author end */
 /*section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section section */
 /*footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start footer start */
-footer{
-    background-color: #181818;
-}
 footer img{
     width: 200px;
     display: block;
@@ -725,7 +765,6 @@ footer .footer_links ul li , footer .footer_links ul li a{
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
-    font-size: 70%;
 }
 footer .footer_links ul li a:hover{
     color: var(--shade_of_orange);
